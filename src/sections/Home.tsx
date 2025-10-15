@@ -4,7 +4,9 @@ const Home = () => {
     return (
         <>
             <div>
-                Hi I am Vaibhav Hawale
+                <span>Hi I am </span>
+                <span>Vaibhav Hawale</span>
+                <span>Full Stack Webv Develeper</span>
             </div>
         </>
     )
