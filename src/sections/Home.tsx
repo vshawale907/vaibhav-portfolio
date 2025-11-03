@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
 
                 {/* Social Icons */}
-                <div className="flex space-x-6 mt-4">
+                <div className="flex space-x-6 mt-6">
                     <a
                         href="https://x.com/yourusername"
                         target="_blank"
