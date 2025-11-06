@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaDiscord, FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {
     return (
@@ -31,16 +32,16 @@ const Home = () => {
                 {/* Social Icons */}
                 <div className="flex space-x-6 mt-6">
                     <a
-                        href="https://x.com/yourusername"
+                        href="https://x.com/https://x.com/vshawale90"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="X"
                         className="text-gray-400 hover:text-black transition-transform transform hover:scale-110"
                     >
-                        <FaTwitter size={26} />
+                        <FaXTwitter size={26} />
                     </a>
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/vaibhav-hawale-13a645257/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -49,7 +50,7 @@ const Home = () => {
                         <FaLinkedin size={26} />
                     </a>
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/vshawale907"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
@@ -58,7 +59,7 @@ const Home = () => {
                         <FaGithub size={26} />
                     </a>
                     <a
-                        href="https://discord.gg/yourDiscordID"
+                        href="http://discordapp.com/users/1245308638361550889"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Discord"
@@ -73,8 +74,9 @@ const Home = () => {
             <img
                 src="/src/assets/vaibhav_image.jpg"
                 alt="Profile"
-                className="rounded-full w-64 h-64 object-cover mt-8 md:mt-0 shadow-lg"
+                className="rounded-full w-72 h-72 object-cover mt-8 md:mt-0 shadow-lg"
             />
+
         </section>
     );
 };

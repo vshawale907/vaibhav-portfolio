@@ -5,7 +5,7 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 w-full bg-[#0f0f0f]/95 backdrop-blur text-white p-4 shadow-md z-50">
             <div className="flex justify-between items-center max-w-6xl mx-auto">
                 <Link to="/" className="text-[#ff6600] font-bold text-xl">
-                    LOGO
+                    VH
                 </Link>
 
                 <div className="space-x-8 hidden md:flex">
