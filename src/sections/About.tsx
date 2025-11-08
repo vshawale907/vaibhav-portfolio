@@ -36,7 +36,7 @@ const About = () => {
 
 
     return (
-        <div className="px-3 md:px-8 lg:px-12 py-12 text-gray-800 bg-gradient-to-b from-white to-gray-50">
+        <div className="px-3 md:px-8 lg:px-12 py-12 text-gray-800 bg-gradient-to-b from-orange-500 to-orange-500">
             {/* About Text */}
             <div className="max-w-4xl mx-auto text-center leading-relaxed text-lg">
                 <h1 className="text-3xl font-bold mb-6 text-orange-500">About Me</h1>
@@ -47,10 +47,10 @@ const About = () => {
                     I enjoy building projects that combine innovation with real-world impact — from developing a blockchain-based electronic voting system to exploring green labeling and carbon-neutrality platforms.
                 </p>
                 <p className="mb-4">
-                    As the <span className="font-semibold">Publicity & Sponsorship Head at ACM</span>, I’ve organized multiple hackathons and tech events, enhancing my teamwork, leadership, and communication skills.
+                    As the <span className="font-semibold">Publicity & Sponsorship Head at ACM</span>, I've organized multiple hackathons and tech events, enhancing my teamwork, leadership, and communication skills.
                 </p>
                 <p>
-                    Currently, I’m diving deeper into <span className="font-semibold">Web3 security research</span> and modern web technologies to create scalable, secure, and impactful digital solutions.
+                    Currently, I'm diving deeper into <span className="font-semibold">Web3 security research</span> and modern web technologies to create scalable, secure, and impactful digital solutions.
                 </p>
 
                 <div className="mt-8">
