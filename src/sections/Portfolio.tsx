@@ -1,96 +1,63 @@
 import React from "react";
-
-// ✅ Import your project images from src/assets
-import solImg from "../assets/sol.png";
-// import greenImg from "../assets/green-labeling.png";
-// import flaskImg from "../assets/flask-bookstore.png";
-// import zombiesImg from "../assets/cryptozombies.png";
-// import portfolioImg from "../assets/portfolio.png";
+import { FaGithub } from "react-icons/fa";
+import { BiLinkExternal } from "react-icons/bi";
 
 const Portfolio = () => {
     // 🧱 Projects Data
     const projects = [
         {
-            title: "Ethereum-Based Electronic Voting System",
+            title: "Spend Smart",
             description:
-                "A secure and transparent voting system built using Ethereum blockchain to ensure tamper-proof elections.",
+                "Spend Smart is a MERN-based finance app that lets users securely track expenses, manage income, set budgets, and get clear insights to improve their financial decisions.",
             features: [
-                "Smart contracts for secure vote storage",
-                "Admin dashboard for candidate management",
-                "Real-time vote count with transparency",
-                "MetaMask integration for decentralized login",
+                "Built a personal finance management web application to help users track expenses and analyze spending patterns.",
+                "Developed a responsive frontend using React.js and Tailwind CSS, integrated with a Node.js + Express.js backend.",
+                "Utilized MongoDB to store and manage user profiles, transactions, and categorized expenses.",
+                "Implemented secure user authentication and interactive spending insights using Chart.js visualizations.",
+                "Focused on clean UI/UX design, modular architecture, and optimized overall application performance."
             ],
-            techStack: ["Solidity", "Web3.js", "React", "Ganache", "MetaMask"],
+            techStack: ["React.js ", "Tailwind CSS ", " Node.js ", "Express.js", "MongoDB ", "JWT Authentication"],
             links: {
-                github: "https://github.com/yourusername/Electronic-Voting-System",
-                liveDemo: "https://yourvotingdapp.vercel.app/",
+                github: " ",
+                liveDemo: " ",
             },
-            image: solImg,
+            // image: solImg,
         },
         {
-            title: "Blockchain-Based Green Labeling & Carbon Credit Platform",
+            title: "Crowdsourced Civic Issue Reporting and Resolution System",
             description:
-                "A platform enabling businesses to trace, retire, and validate carbon credits using UCR smart contracts.",
+                "I-powered civic issue reporting system that lets citizens capture and upload issues instantly, auto-detects the problem, routes it to the right department, and provides real-time tracking with an analytics dashboard for faster resolution.",
             features: [
-                "Smart contract-based credit retirement",
-                "UCR integration for carbon validation",
-                "Traceability dashboard for transparency",
-                "NFT-style green labeling for verified companies",
+                "Built a fast and responsive frontend using Vite + React, including dashboards, maps, and charts",
+                "Connected the app to backend REST APIs, handled file uploads, and used Redux Toolkit for clean state management",
+                "Added authentication, Axios interceptors, loaders, toasts, and error handling to improve the user experience.",
+                "Created a matching React Native (Expo) mobile app with the same features and shared API logic",
             ],
             techStack: ["Solidity", "React", "Node.js", "Express", "MongoDB"],
             links: {
-                github: "https://github.com/yourusername/Green-Labeling-Platform",
-                liveDemo: "https://greenlabeling.vercel.app/",
+                github: " ",
+                liveDemo: " ",
             },
             // image: greenImg,
         },
-        {
-            title: "Flask Bookstore App",
-            description:
-                "An online bookstore where users can browse, add to cart, and buy books securely.",
-            features: [
-                "User authentication and session management",
-                "Admin panel for book management",
-                "Cart and checkout functionality",
-            ],
-            techStack: ["Flask", "Python", "SQLite", "HTML", "CSS"],
-            links: {
-                github: "https://github.com/yourusername/flask-bookstore",
-                liveDemo: "https://flask-bookstore.onrender.com/",
-            },
-            // image: flaskImg,
-        },
-        {
-            title: "CryptoZombies DApp (Learning Project)",
-            description:
-                "A fun blockchain game where users create and battle zombies using Solidity smart contracts.",
-            features: [
-                "ERC721 token-based zombie characters",
-                "Smart contract-based game logic",
-                "Frontend built using Web3.js",
-            ],
-            techStack: ["Solidity", "Web3.js", "JavaScript", "HTML/CSS"],
-            links: {
-                github: "https://github.com/yourusername/cryptozombies",
-            },
-            // image: zombiesImg,
-        },
-        {
-            title: "Portfolio Website",
-            description:
-                "My personal portfolio website showcasing my projects, skills, and experiences.",
-            features: [
-                "Responsive design using Tailwind CSS",
-                "Smooth animations and transitions",
-                "Dynamic project rendering",
-            ],
-            techStack: ["React", "TailwindCSS", "Framer Motion"],
-            links: {
-                github: "https://github.com/yourusername/portfolio",
-                liveDemo: "https://yourportfolio.vercel.app/",
-            },
-            // image: portfolioImg,
-        },
+        // {
+        //     title: "Flask Bookstore App",
+        //     description:
+        //         "An online bookstore where users can browse, add to cart, and buy books securely.",
+        //     features: [
+        //         "User authentication and session management",
+        //         "Admin panel for book management",
+        //         "Cart and checkout functionality",
+        //     ],
+        //     techStack: ["Flask", "Python", "SQLite", "HTML", "CSS"],
+        //     links: {
+        //         github: "https://github.com/yourusername/flask-bookstore",
+        //         liveDemo: "https://flask-bookstore.onrender.com/",
+        //     },
+        //     // image: flaskImg,
+        // },
+
+
     ];
 
     // 🧩 Component UI
@@ -105,46 +72,47 @@ const Portfolio = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-[#1A1A1A] p-5 rounded-2xl border border-gray-800 hover:border-gray-700 hover:-translate-y-1 transition-all duration-300"
+                            className="bg-[#1A1A1A] p-6 rounded-2xl border border-gray-800 hover:border-[#ff6600]/40 transition-all duration-300 flex flex-col"
                         >
-                            {/* Image */}
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="rounded-xl mb-4 w-full h-auto object-cover"
-                                style={{ maxHeight: "200px" }}
-                            />
-
                             {/* Title */}
-                            <h3 className="text-xl font-semibold mb-2 text-white">
+                            <h3 className="text-xl font-semibold mb-3 text-[#ff6600]">
                                 {project.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-400 mb-3">{project.description}</p>
+                            <p className="text-gray-300 mb-4">{project.description}</p>
 
                             {/* Features */}
-                            <ul className="text-sm text-gray-500 mb-3 list-disc list-inside">
+                            <ul className="text-sm text-gray-400 mb-4 list-disc list-inside space-y-1">
                                 {project.features.map((feature, i) => (
                                     <li key={i}>{feature}</li>
                                 ))}
                             </ul>
 
                             {/* Tech Stack */}
-                            <p className="text-sm text-gray-700 mb-3">
-                                <strong>Tech Stack:</strong> {project.techStack.join(", ")}
-                            </p>
+                            <div className="mt-auto">
+                                <p className="text-sm text-gray-400">
+                                    <strong className="text-gray-300">Tech Stack:</strong>{" "}
+                                    {project.techStack.map((tech, i) => (
+                                        <span key={i}>
+                                            {tech}
+                                            {i !== project.techStack.length - 1 && <span className="mx-1">•</span>}
+                                        </span>
+                                    ))}
+                                </p>
+                            </div>
 
                             {/* Links */}
-                            <div className="flex gap-4">
+                            <div className="flex gap-4 mt-auto pt-4">
                                 {project.links.github && (
                                     <a
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-blue-600 hover:underline"
+                                        className="inline-flex items-center gap-2 text-gray-400 hover:text-[#ff6600] transition-colors"
                                     >
-                                        GitHub
+                                        <FaGithub size={20} />
+                                        <span>GitHub</span>
                                     </a>
                                 )}
                                 {project.links.liveDemo && (
@@ -152,9 +120,10 @@ const Portfolio = () => {
                                         href={project.links.liveDemo}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-green-600 hover:underline"
+                                        className="inline-flex items-center gap-2 text-gray-400 hover:text-[#ff6600] transition-colors"
                                     >
-                                        Live Demo
+                                        <BiLinkExternal size={20} />
+                                        <span>Live Demo</span>
                                     </a>
                                 )}
                             </div>
