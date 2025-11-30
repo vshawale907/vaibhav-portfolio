@@ -1,4 +1,3 @@
-import React from 'react'
 
 const About = () => {
     const skills = [
@@ -39,7 +38,7 @@ const About = () => {
         <div className="h-full w-full bg-[#0D0D0D]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 h-full flex flex-col justify-center">
                 {/* About Text */}
-                <div className="w-full max-w-5xl mx-auto text-left md:text-left leading-relaxed text-lg">
+                <div className="w-full text-left md:text-left leading-relaxed text-lg">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#ff6600]">About Me</h1>
                     <p className="mb-5 text-gray-300">
                         Hi, I’m <span className="font-semibold text-white">Vaibhav Hawale</span>, a final-year IT Engineering student and an aspiring <span className="font-semibold text-[#ff6600]">Full Stack Web Developer</span>. I specialize in building clean, scalable, and user-centric web applications using React, Node.js, Express.js, MongoDB, and SQL.
@@ -67,9 +66,10 @@ const About = () => {
 
 
                     <div className="mb-10">
-                        <button className="bg-[#ff6600] text-white px-6 py-2 rounded-md hover:bg-[#ff6600]/90 transition font-medium shadow-lg">
+                        <a href="/Vaibhav-Hawale-U.pdf"
+                            download className="bg-[#ff6600] text-white px-6 py-2 rounded-md hover:bg-[#ff6600]/90 transition font-medium shadow-lg">
                             Download Resume
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -77,24 +77,22 @@ const About = () => {
                 <div className="w-full mt-8">
                     <h2 className="text-3xl font-bold mb-8 text-white text-center">Tech Stack</h2>
 
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
-                            {skills.map((skill, index) => (
-                                <div
-                                    key={index}
-                                    className="flex flex-col items-center bg-[#1A1A1A] p-4 rounded-xl border border-gray-800 hover:border-[#ff6600]/50 hover:-translate-y-1 transition-all duration-300 w-28"
-                                >
-                                    <img
-                                        src={skill.logo}
-                                        // alt={skill.name}
-                                        className="w-12 h-12 mb-3"
-                                    />
-                                    <p className="text-sm font-medium text-gray-300 text-center">
-                                        {skill.name}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+                        {skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className="flex flex-col items-center bg-[#1A1A1A] p-4 rounded-xl border border-gray-800 hover:border-[#ff6600]/50 hover:-translate-y-1 transition-all duration-300 w-28"
+                            >
+                                <img
+                                    src={skill.logo}
+                                    // alt={skill.name}
+                                    className="w-12 h-12 mb-3"
+                                />
+                                <p className="text-sm font-medium text-gray-300 text-center">
+                                    {skill.name}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

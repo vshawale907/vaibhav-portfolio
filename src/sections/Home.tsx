@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { MouseEvent } from 'react';
-import { FaGithub, FaLinkedin, FaDiscord, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDiscord} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {

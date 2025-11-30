@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 
@@ -26,7 +25,7 @@ const Portfolio = () => {
         {
             title: "Crowdsourced Civic Issue Reporting and Resolution System",
             description:
-                "I-powered civic issue reporting system that lets citizens capture and upload issues instantly, auto-detects the problem, routes it to the right department, and provides real-time tracking with an analytics dashboard for faster resolution.",
+                "AI-powered civic issue reporting system that lets citizens capture and upload issues instantly, auto-detects the problem, routes it to the right department, and provides real-time tracking with an analytics dashboard for faster resolution.",
             features: [
                 "Built a fast and responsive frontend using Vite + React, including dashboards, maps, and charts",
                 "Connected the app to backend REST APIs, handled file uploads, and used Redux Toolkit for clean state management",
