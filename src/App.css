@@ -33,6 +33,13 @@
   }
 }
 
+@media (max-width: 640px) {
+  #tsparticles { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tsparticles { display: none !important; }
+}
+
 .card {
   padding: 2em;
 }
