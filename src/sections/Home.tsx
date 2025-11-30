@@ -88,7 +88,7 @@ const Home = () => {
             <div className="relative">
                 <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
                     <img
-                        src="/src/assets/vaibhav_image.jpg"
+                        src="/vaibhav_image.jpg"
                         alt="Profile"
                         className="rounded-full w-full h-full object-cover shadow-2xl ring-4 ring-[#ff6600]/20"
                     />
