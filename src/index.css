@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global resets */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -10,12 +11,11 @@ html {
 body {
     margin: 0;
     padding: 0;
-    /* Use native page scrolling */
     overflow: auto;
     overflow-x: hidden;
 }
 
-/* Optional: style the native page scrollbar */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -33,56 +33,33 @@ body {
     background: #ff8533;
 }
 
-/* Animated gradient background (subtle, site-wide) */
-.bg-animated-gradient {
-    background: linear-gradient(120deg, #0b0b0b 0%, #0d0d0d 25%, #0b0b0b 50%, #0f0f0f 100%);
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-
-    html {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        /* Use native page scrolling */
-        overflow: auto;
-        overflow-x: hidden;
-    }
-
-    /* Optional: style the native page scrollbar */
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #0f0f0f;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #ff6600;
-        border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #ff8533;
-    }
-}
-
-
-/* Hide heavy background on small screens if needed */
-@media (max-width: 640px) {
-    .bg-animated-gradient {
-        background: #0f0f0f;
-        /* fallback solid color on small screens */
-    }
-}
-
+/* Animated gradient background */
 .bg-animated-gradient {
     background: linear-gradient(120deg, #0d0d0d 0%, #0f0f0f 20%, #0d0d0d 40%, #ff6600 100%);
     background-size: 300% 300%;
     animation: gradientShift 12s ease infinite;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+    .bg-animated-gradient {
+        background: #0f0f0f;
+        /* solid fallback */
+        animation: none;
+    }
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
