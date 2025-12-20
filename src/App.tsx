@@ -1,6 +1,5 @@
 
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Home from './sections/Home';
 import About from './sections/About';
 import Experience from './sections/Experience';
