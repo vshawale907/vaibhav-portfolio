@@ -41,12 +41,15 @@ npm run dev
 ```
 --- 
 
-👤About Me
+## 👤About Me
+
 I am a tech-focused engineering student with a strong interest in web development and modern technologies.
 This portfolio represents my skills and work in a simple and structured manner for recruiters and clients to review efficiently.
 ---
 
-🔗 Connect With Me
-X (Twitter): https://x.com/vshawale90
+## 🔗 Connect With Me
+
+X (Twitter): https://x.com/vshawale90 
+
 LinkedIn: https://www.linkedin.com/in/vaibhav-hawale-13a645257/
 ---
