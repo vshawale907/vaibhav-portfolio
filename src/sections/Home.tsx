@@ -99,7 +99,7 @@ const Home = () => {
                         Hire Me
                     </Link>
                     <a
-                        href="/Vaibhav-Hawale-U.pdf"
+                        href="/Vaibhav_Hawale.pdf"
                         download
                         className="border-2 border-[#ff6600] px-6 py-3 rounded-lg text-[#ff6600] hover:bg-[#ff6600] hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#ff6600]/20 font-medium"
                     >

@@ -49,7 +49,7 @@ const About = () => {
 
                     <div className="mb-10">
                         <a
-                            href="/Vaibhav-Hawale-U.pdf"
+                            href="/Vaibhav_Hawale.pdf"
                             download
                             className="bg-[#ff6600] text-white px-6 py-2 rounded-md hover:bg-[#e65c00] transition font-medium shadow-lg"
                         >
