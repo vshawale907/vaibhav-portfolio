@@ -1,4 +1,4 @@
-import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -37,7 +37,8 @@ const Contact = () => {
                     phone: formData.phone,
                     subject: formData.subject,
                     message: formData.message,
-                }
+                },
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
             setStatusType('success');
@@ -64,9 +65,8 @@ const Contact = () => {
 
                 {/* Status Message */}
                 {statusMessage && (
-                    <div className={`w-full max-w-4xl mb-6 p-4 rounded-md text-center ${
-                        statusType === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                    }`}>
+                    <div className={`w-full max-w-4xl mb-6 p-4 rounded-md text-center ${statusType === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                        }`}>
                         {statusMessage}
                     </div>
                 )}
