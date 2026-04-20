@@ -1,5 +1,9 @@
-import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
+
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -13,10 +17,6 @@ const Contact = () => {
     const [statusMessage, setStatusMessage] = useState('');
     const [statusType, setStatusType] = useState<'success' | 'error' | ''>('');
 
-    useEffect(() => {
-        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-    }, []);
-
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
@@ -27,27 +27,34 @@ const Contact = () => {
         setLoading(true);
         setStatusMessage('');
 
+        // Debug: log env vars (remove after fixing)
+        console.log('EmailJS config:', { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY: PUBLIC_KEY ? '✓ set' : '✗ missing' });
+
         try {
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            const result = await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
                 {
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    subject: formData.subject,
-                    message: formData.message,
+                    from_name:  formData.name,
+                    from_email: formData.email,
+                    phone:      formData.phone,
+                    subject:    formData.subject,
+                    message:    formData.message,
+                    reply_to:   formData.email,
                 },
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                PUBLIC_KEY
             );
 
+            console.log('EmailJS success:', result);
             setStatusType('success');
             setStatusMessage('✓ Message sent successfully! I\'ll get back to you soon.');
             setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        } catch (error) {
-            setStatusType('error');
-            setStatusMessage('✗ Failed to send message. Please try again.');
+        } catch (error: unknown) {
+            const err = error as { status?: number; text?: string; message?: string };
+            const detail = err?.text || err?.message || JSON.stringify(error);
             console.error('EmailJS error:', error);
+            setStatusType('error');
+            setStatusMessage(`✗ Failed to send: ${detail}`);
         } finally {
             setLoading(false);
         }
