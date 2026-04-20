@@ -14,7 +14,7 @@ const educationData: EducationEntry[] = [
         degree: 'B.E. Information Technology',
         institution: 'MMCOE (Marathwada Mitra Mandal\'s College of Engineering), Pune',
         year: '2021 – 2025',
-        score: '7.5 CGPA / 10',
+        score: '7.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          CGPA / 10',
         highlights: [
             'ACM MMCOE Chapter — Publicity & Sponsorship Head',
             'IT Tech Club — Web Developer & Event Organizer',
